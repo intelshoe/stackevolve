@@ -1,2 +1,2 @@
 # StackEvolve.com
-StackEvolve.com - A website for software developers.
+StackEvolve.com - A software development and security website, using a custom Content Management System.
