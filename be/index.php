@@ -1,3 +1,5 @@
+// This is the admin panel homepage.
+
 <!DOCTYPE html>
 <html>
 <head>
