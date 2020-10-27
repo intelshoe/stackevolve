@@ -1,9 +1,9 @@
-// This is the admin panel homepage.
+// This is the admin login homepage.
 
 <!DOCTYPE html>
 <html>
 <head>
-<title>Admin Panel</title>
+<title>Admin Login</title>
 </head>
 <body>
 
