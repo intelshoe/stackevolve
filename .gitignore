@@ -4,3 +4,7 @@ StackEvolveOrg/about/__pycache__/__init__.cpython-36.pyc
 StackEvolveOrg/about/__pycache__/urls.cpython-36.pyc
 StackEvolveOrg/StackEvolveOrg/__pycache__/urls.cpython-36.pyc
 StackEvolveOrg/StackEvolveOrg/__pycache__/urls.cpython-36.pyc
+*.pyc
+*.pyc
+StackEvolveOrg/StackEvolveOrg/__pycache__/urls.cpython-39.pyc
+StackEvolveOrg/StackEvolveOrg/__pycache__/urls.cpython-39.pyc
