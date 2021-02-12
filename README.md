@@ -3,8 +3,8 @@ This will be a django server that ties into my other projects.
 
 To-Do
 =====
-Find and purchase hosting
-Setup Deployment Server
-Setup development environment
-Plan sitemap
-Build site
+<ul><li>Find and purchase hosting</li>
+  <li>Setup Deployment Server</li>
+  <li>Setup development environment</li>
+  <li>Plan sitemap</li>
+  <li>Build site</li></ul>
