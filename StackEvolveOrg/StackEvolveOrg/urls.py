@@ -19,6 +19,7 @@ from about import urls
 from questions import urls
 from research import urls
 from software import urls
+from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
