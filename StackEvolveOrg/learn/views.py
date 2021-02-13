@@ -9,11 +9,9 @@ def index(request):
 # Catagory page content
 def tag_archive(request, tag):
     a_list = Article.objects.filter(tag)
-    return HttpResponse("Welcome to our research \
-        publications, tutorials, and experiments!")
+    return HttpResponse(a_list)
 
 # Article detail pages
 def details_page(request, url_title):
     a_list = Article.objects.filter(article_title)
-    return HttpResponse("Welcome to our research \
-        publications, tutorials, and experiments!")
+    return HttpResponse(a_list)

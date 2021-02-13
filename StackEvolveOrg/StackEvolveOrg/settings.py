@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'research.apps.ResearchConfig',
+    'learn.apps.LearnConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'StackEvolveOrg.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',# 'NAME': BASE_DIR / 'db.sqlite3',
-        'NAME': 'stack',
+        'NAME': 'stacke',
         'USER': 'root',
         'PASSWORD': 'elmosworld1',
         'HOST': '127.0.0.1',

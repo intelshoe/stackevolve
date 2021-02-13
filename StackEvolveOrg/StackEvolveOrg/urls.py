@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import include, path
 from about import urls
 from questions import urls
-from research import urls
+from learn import urls
 from software import urls
 from . import views
 
@@ -25,7 +25,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('about/', include('about.urls')),
     path('questions/', include('questions.urls')),
-    path('research/', include('research.urls')),
+    path('learn/', include('learn.urls')),
     path('software/', include('software.urls')),
     path('admin/', admin.site.urls),
 ]
