@@ -21,6 +21,7 @@ from research import urls
 from software import urls
 
 urlpatterns = [
+    path('', views.index, name='index'),
     path('about/', include('about.urls')),
     path('questions/', include('questions.urls')),
     path('research/', include('research.urls')),

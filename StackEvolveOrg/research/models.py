@@ -9,12 +9,11 @@ class Reporter(models.Model):
 
 # Research articles
 class Article(models.Model):
-    pub_date = models.Datefield()
-    headline = models.CharField(max_length=200)
-    # not safe
-    url_title = models.Textfield(max_legnth=25)
-    content = models.Textfield()
-    tag = models.Textfield(max_length=20)
+    pub_date = models.DateTimeField()
+    headline = models.CharField(200)
+    url_title = models.CharField(25)
+    content = models.TextField()
+    tag = models.CharField(20)
     author = models.ForeignKey(Reporter, on_delete=models.CASCADE)
 
     def __str__(self):
