@@ -8,8 +8,7 @@ def index(request):
 
 # Catagory page content
 def tag_archive(request, tag):
-    a_list = Article.objects.filter(tag)
-    return HttpResponse(a_list)
+    return HttpResponse(f"Welcome to the {tag} learning center!")
 
 # Article detail pages
 def details_page(request, url_title):
