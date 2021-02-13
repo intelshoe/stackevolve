@@ -14,6 +14,7 @@ class Article(models.Model):
     # not safe
     url_title = models.Textfield(max_legnth=25)
     content = models.Textfield()
+    tags = models.Textfield()
     author = models.ForeignKey(Reporter, on_delete=models.CASCADE)
 
     def __str__(self):
