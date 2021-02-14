@@ -1,9 +1,13 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Stack Evolve Team - Software Development Group and Resources{% endblock %}
 
-{% block content %}
+{% block header %}
+<link rel="stylesheet" href="{% static 'index.css' %}" />
+{% endblock %}
 
+{% block content %}
 <pre>
        \`*-.
         )  _`-.
@@ -21,6 +25,10 @@
  [bug] `*-*   `*-*  `*-*'
 
 </pre>
+
+  <canvas id="canvas1"></canvas>
+  <script src="{% static 'particles.js' %}"></script>
+
 <div style="text-align: center;">
 <h1 style="">Stack Evolve</h1>
 <h2>Software Development Group</h2>
