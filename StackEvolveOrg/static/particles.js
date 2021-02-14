@@ -43,6 +43,21 @@ class Particle {
     if (this.x > canvas.width || this.x < 0) {
       this.directionX = -this.directionX;
     }
-    if (this.y)
+    if (this.y > canvas.height || this.y < 0) {
+      this.directionY = -this.directionY;
+    }
+
+    // collision detection
+    let dx = mouse.x - this.x;
+    let dy = mouse.y - this.y;
+    let distance = Math.sqrt(dx*dx + dy*dy);
+    if (distance < mouse.radius + this.size){
+      if (mouse.x < this.x && this.x < canvas.width - this.size * 10) {
+        this.x += 10;
+      }
+      if (mouse.x > this.x && this.x > this.size * 10) {
+        this.x -= 10;
+      }
+    }
   }
 }
