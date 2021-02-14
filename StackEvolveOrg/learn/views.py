@@ -15,5 +15,5 @@ def tag_archive(request, tag):
 
 # Article detail pages
 def details_page(request, url_title):
-    a_list = Article.objects.filter(article_title)
+    wow = Article.objects.filter(article_title)
     return HttpResponse(a_list)
