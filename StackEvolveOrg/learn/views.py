@@ -8,7 +8,7 @@ def index(request):
 
 # Catagory page content
 def tag_archive(request, tag):
-    return HttpResponse(f"Welcome to the {tag} learning center!")
+    return render(request, 'learn/tags_archive.html')
 
 # Article detail pages
 def details_page(request, url_title):

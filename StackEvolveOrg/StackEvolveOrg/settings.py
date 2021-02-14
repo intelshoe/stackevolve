@@ -53,7 +53,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'StackEvolveOrg.urls'
 
 # Templates Directory
-TEMPLATE_DIR = os.path.join(BASE_DIR,"templates")
+TEMPLATE_DIR = BASE_DIR / "templates"
 
 TEMPLATES = [
     {
