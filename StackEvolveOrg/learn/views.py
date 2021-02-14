@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
+from .models import Article
 
 # homepage content
 def index(request):
@@ -8,7 +9,8 @@ def index(request):
 
 # Catagory page content
 def tag_archive(request, tag):
-    context ={'tag' : tag}
+    arts = Article.objects.filter(tag=tag)
+    context ={'tag' : tag, 'article_list': arts}
     return render(request, 'learn/tags_archive.html', context)
 
 # Article detail pages
