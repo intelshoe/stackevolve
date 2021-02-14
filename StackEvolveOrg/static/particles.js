@@ -1,63 +1,28 @@
-const canvas = document.getElementById("canvas1");
-const ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-let particlesArray;
-
-// get mouse position
-let mouse = {
-  x: null,
-  y: null,
-  radius: (canvas.height/80) * (canvas.width/80);
-}
-
-window.addEventListener('mousemove',
-  function(event) {
-    mouse.x = event.x;
-    mouse.y = event.y;
-  }
-);
-
-// create particle
-class Particle {
-  constructor(x, y, directionX, directionY, size, color) {
-    this.x = x;
-    this.y = y;
-    this.directionX = directionX;
-    this.directionY = directionY;
-    this.size = size;
-    this.color = color;
-  }
-  // method to draw individual particles
-  draw() {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-    ctx.fillStyle = '#8c5523';
-    ctx.fill();
-  }
-  // check particle position, check mouse position, move the particle
-  //and draw
-  update() {
-    // check if particle is still within canvas
-    if (this.x > canvas.width || this.x < 0) {
-      this.directionX = -this.directionX;
+window.onload=function(){
+    function DrawSpiral(mod) {
+        var c = document.getElementById("canvas1");
+        var cxt = c.getContext("2d");
+        var centerX = 150;
+        var centerY = 150;
+        cxt.save();
+        cxt.clearRect(0, 0, c.width, c.height);
+        cxt.beginPath();
+        cxt.moveTo(centerX, centerY);
+        var STEPS_PER_ROTATION = 60;
+        var increment = 2 * Math.PI / STEPS_PER_ROTATION;
+        var theta = increment;
+        while (theta < 40 * Math.PI) {
+            var newX = centerX + theta * Math.cos(theta - mod);
+            var newY = centerY + theta * Math.sin(theta - mod);
+            cxt.lineTo(newX, newY);
+            theta = theta + increment;
+        }
+        cxt.stroke();
+        cxt.restore();
     }
-    if (this.y > canvas.height || this.y < 0) {
-      this.directionY = -this.directionY;
-    }
-
-    // collision detection
-    let dx = mouse.x - this.x;
-    let dy = mouse.y - this.y;
-    let distance = Math.sqrt(dx*dx + dy*dy);
-    if (distance < mouse.radius + this.size){
-      if (mouse.x < this.x && this.x < canvas.width - this.size * 10) {
-        this.x += 10;
-      }
-      if (mouse.x > this.x && this.x > this.size * 10) {
-        this.x -= 10;
-      }
-    }
-  }
+    var counter = 0;
+    setInterval(function () {
+        DrawSpiral(counter);
+        counter += 0.075;
+    }, 10);
 }
