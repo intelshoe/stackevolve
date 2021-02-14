@@ -18,3 +18,31 @@ window.addEventListener('mousemove',
     mouse.y = event.y;
   }
 );
+
+// create particle
+class Particle {
+  constructor(x, y, directionX, directionY, size, color) {
+    this.x = x;
+    this.y = y;
+    this.directionX = directionX;
+    this.directionY = directionY;
+    this.size = size;
+    this.color = color;
+  }
+  // method to draw individual particles
+  draw() {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+    ctx.fillStyle = '#8c5523';
+    ctx.fill();
+  }
+  // check particle position, check mouse position, move the particle
+  //and draw
+  update() {
+    // check if particle is still within canvas
+    if (this.x > canvas.width || this.x < 0) {
+      this.directionX = -this.directionX;
+    }
+    if (this.y)
+  }
+}
