@@ -17,4 +17,4 @@ window.addEventListener('mousemove',
     mouse.x = event.x;
     mouse.y = event.y;
   }
-)
+);
