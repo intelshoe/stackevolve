@@ -8,7 +8,8 @@ def index(request):
 
 # Catagory page content
 def tag_archive(request, tag):
-    return render(request, 'learn/tags_archive.html')
+    context ={'tag' : tag}
+    return render(request, 'learn/tags_archive.html', context)
 
 # Article detail pages
 def details_page(request, url_title):
