@@ -10,7 +10,7 @@
 
 {% block content %}
 
-<pre>
+<pre id="cat">
        \`*-.
         )  _`-.
        .  : `. .
@@ -25,15 +25,13 @@
          ; '   : :`-:     _.`* ;
        .*' /  .*' ; .*`- +'  `*'
  [bug] `*-*   `*-*  `*-*'
-
-</pre>
-
+<div>
 <canvas id="canvas1"><p>This is a test!</p></canvas>
 <script src="{% static 'particles.js' %}"></script>
-<div style="text-align: center;">
 <h1 style="">Stack Evolve</h1>
 <h2>Software Development Group</h2>
-<p style="text-style: bold; padding: 3em; ">We solve problems and provide answers to questions related to software development and security.</p>
-<p style="">More coming soon!</p>
+<p>We solve problems and provide answers to questions related to software development and security.</p>
+<p>More coming soon!</p>
 </div>
+</pre>
 {% endblock %}

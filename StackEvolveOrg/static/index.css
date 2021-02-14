@@ -2,11 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #eeeeee;
 }
 
 #canvas1 {
-  margin: auto;
-  height: 100px;
-  width: 100px;
+  position: absolute;
+  top: 0;
+  left: 700px;
+  height: 120px;
+  width: 120px;
   background: radial-gradient(#ffc38c, #ff9b40);
+}
+
+#cat {
+  margin-left: 80px;
+  margin-top: 40px;
 }
