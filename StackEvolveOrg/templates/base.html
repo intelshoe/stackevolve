@@ -6,6 +6,9 @@
 </head>
 <body>
 <img id="logo" src="{% static 'stackevolve_logo.png' %}" />
+
+    {% block sidebar %}{% endblock %}
+
     {% block content %}{% endblock %}
 </body>
 </html>
