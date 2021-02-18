@@ -5,7 +5,16 @@
     {% block header %}{%endblock%}
 </head>
 <body>
+  <nav id="nav">
+    <a href="{% url 'index' %}">Home</a>
+    <a href="{% url 'about' %}">About</a>
+    <a href="{% url 'learn' %}">Research and Publications</a>
+    <a href="{% url 'ask' %}">Ask A Question and Find Answers</a>
+    <a href="{% url 'software' %}">Software Downloads</a>
+  </nav>
+  
 <img id="logo" src="{% static 'stackevolve_logo.png' %}" />
+
 
     {% block sidebar %}{% endblock %}
 
