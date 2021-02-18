@@ -23,9 +23,9 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('about/', include('about.urls')),
-    path('ask/', include('questions.urls')),
-    path('learn/', include('learn.urls')),
-    path('software/', include('software.urls')),
+    path('about/', include('about.urls'), name='index'),
+    path('ask/', include('questions.urls'), name='index'),
+    path('learn/', include('learn.urls'), name='index'),
+    path('software/', include('software.urls'), name='index'),
     path('admin/', admin.site.urls),
 ]
