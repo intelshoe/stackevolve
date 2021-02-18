@@ -5,13 +5,6 @@
 {% block content %}
 <h1>Research Papers and Tutorials for {{ tag }}</h1>
 
-<nav id="nav">
-  <a href="{% url 'index' %}">Home</a>
-  <a href="{% url 'about' %}">About</a>
-  <a href="{% url 'learn' %}">Research and Publications</a>
-  <a href="{% url 'ask' %}">Ask A Question and Find Answers</a>
-  <a href="{% url 'software' %}">Software Downloads</a>
-
 {% for article in article_list %}
   <p>{{ article.headline }}</p>
   <p>By {{ article.author }}</p>
