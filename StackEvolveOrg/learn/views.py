@@ -4,8 +4,7 @@ from .models import Article
 
 # homepage content
 def index(request):
-    return HttpResponse("Welcome to our research \
-        publications, tutorials, and experiments!")
+    return render(request, 'learn/tags_archive.html')
 
 # Catagory page content
 def tag_archive(request, tag):
